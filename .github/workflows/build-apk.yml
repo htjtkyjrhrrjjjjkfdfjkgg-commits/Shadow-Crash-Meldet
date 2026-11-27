@@ -1,4 +1,5 @@
 
+name: Build Android APK
 
 on:
   push:
@@ -30,15 +31,15 @@ jobs:
           gradle-version: '8.9'
 
       - name: Install Android SDK
-      
         uses: android-actions/setup-android@v4
 
       - name: Install SDK packages
-            - name: Extract Android project
+        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
+
+      - name: Extract Android project
         run: |
           unzip -o "ShadowCrashMeldet_Complete_Website_Android(1).zip" -d .
           ls -la android
-        run: sdkmanager "platforms;android-35" "build-tools;35.0.0"
 
       - name: Build APK
         working-directory: android

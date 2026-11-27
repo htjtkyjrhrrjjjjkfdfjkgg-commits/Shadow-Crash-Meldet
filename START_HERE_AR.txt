@@ -1,0 +1,33 @@
+SHADOW CRASH MELDET — دليل البدء والرفع
+
+محتويات الحزمة:
+- android/: مشروع Android Studio بلغة Java.
+- website/: صفحة تعريف عربية جاهزة للنشر عبر GitHub Pages.
+- .github/workflows/build-apk.yml: يبني Debug APK تلقائياً على GitHub Actions.
+
+مهم:
+هذا التطبيق يسجل نتائج الجولات التي تدخلها يدوياً ويعرض إحصاءات وصفية فقط.
+لا يتصل بمنصة Meldet ولا يتنبأ بنتيجة الجولة التالية ولا يضمن الربح.
+
+طريقة الرفع من الهاتف:
+1) فك ضغط الملف ZIP على الهاتف.
+2) افتح مستودع GitHub الخاص بك:
+   https://github.com/htjtkyjrhrrjjjjkfdfjkgg-commits/Shadow-Crash-Meldet
+3) اضغط Add file ثم Upload files.
+4) ارفع محتويات المجلد الناتج من فك الضغط، بما فيها المجلدات المخفية إن أمكن.
+   إذا لم يسمح الهاتف برفع المجلدات دفعة واحدة، استخدم GitHub من المتصفح بوضع سطح المكتب أو تطبيق GitHub.
+5) اكتب رسالة مثل: Initial project upload ثم اضغط Commit changes.
+
+بناء APK:
+- بعد رفع الملفات، افتح تبويب Actions في المستودع.
+- اختر Build Android APK ثم Run workflow (أو انتظر تشغيله بعد الرفع).
+- عند نجاح العملية افتح أحدث تشغيل، ثم نزّل Artifact باسم shadow-crash-meldet-debug-apk.
+- الملف الناتج APK تجريبي Debug وليس إصداراً موقعاً للنشر الرسمي.
+
+نشر الموقع:
+1) افتح Settings ثم Pages.
+2) اختر Deploy from a branch.
+3) اختر Branch: main والمجلد: /website ثم Save.
+4) انتظر ظهور رابط GitHub Pages في نفس الصفحة.
+
+لا يوجد رابط APK مباشر في الموقع قبل نشر APK فعلي. بعد نجاح البناء، يمكن إضافة رابط إصدار حقيقي لاحقاً.
